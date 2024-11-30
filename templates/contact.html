@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block  mess %}
+ <div class="container">
+    <div class="row">
+        <div class="col-md-5">       <h4>Address:</h4>
+            <p>Satya PG for Men</p>
+            <p>Hebbagodi,Banglore-5660099</p>
+            
+            <h4>Email Address:</h4>
+            <p>advsiddharthakumar@yahoo.com</p>
+            <h4>Mobile:</h4><p>9835592257</p>
+        </div>
+    
+        
+    <div class="col-md-6">
+        <form method="post" action="/contact">
+          {% csrf_token %}
+            <div class="mb-3">
+                <label for="exampleInputname" class="form-label">Name</label>
+                <input type="text" class="form-control" name = "name" id="exampleInputname" aria-describedby="nameHelp" placeholder="Enter your name">
+                <div id="nameHelp" class="form-text"></div>
+              </div>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Email address</label>
+              <input type="email" class="form-control" name= "email" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your email">
+              <div id="emailHelp" class="form-text"></div>
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputnumber" class="form-label">Mobile Number</label>
+                <input type="Number" class="form-control" id="exampleInputnumber" name= "mobile" aria-describedby="numberHelp" placeholder= "Enter your mobile number">
+                
+              </div>
+              <div class="mb-3">
+                <label for="desc" class="form-label">Message</label>
+                <textarea class="form-control" id="exampleInputdesc" aria-describedby="numberHelp" rows=3 placeholder= "Enter your message" name="desc" ></textarea>
+                <div id="numberHelp" class="form-text">We'll never share your Details with anyone else.</div>
+              </div>
+
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+          <div class="col-md-1"></div>
+
+
+
+
+
+    </div>
+</div>
+ </div>
+
+{% endblock mess %}
+
+
